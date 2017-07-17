@@ -30,6 +30,9 @@
     "@types/node": "^7.0.0",
     "ava": "^0.20.0",
     "coveralls": "^2.0.0",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
     "nyc": "^10.0.0",
     "prettier": "^1.5.2",
     "rimraf": "^2.0.0",
@@ -44,5 +47,16 @@
     "require": [
       "babel-register"
     ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
